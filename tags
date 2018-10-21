@@ -1,0 +1,16 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BinarySearch	DailyCode/BinarySearch.py	/^class BinarySearch(object):$/;"	c
+config	setup.py	/^config = {$/;"	v
+my_values	DailyCode/BinarySearch.py	/^    my_values = [1,2,3,4,5]$/;"	v	class:BinarySearch
+rank1	DailyCode/BinarySearch.py	/^    def rank1(key, values):$/;"	m	class:BinarySearch
+rank1_test	tests/BinarySearch_tests.py	/^def rank1_test():$/;"	f
+rank2	DailyCode/BinarySearch.py	/^    def rank2(key, values, lo, hi):$/;"	m	class:BinarySearch
+result	DailyCode/BinarySearch.py	/^    result = BinarySearch.rank1(3, my_values)$/;"	v	class:BinarySearch
+setup	tests/DailyCode_tests.py	/^def setup():$/;"	f
+teardown	tests/DailyCode_tests.py	/^def teardown():$/;"	f
+test_basic	tests/DailyCode_tests.py	/^def test_basic():$/;"	f

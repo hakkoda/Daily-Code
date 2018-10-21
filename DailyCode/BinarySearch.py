@@ -1,7 +1,4 @@
 class BinarySearch(object):
-    #def __init__(BinarySearch):
-    #    pass
-
     def rank1(key, values):
         return BinarySearch.rank2(key, values, 0, len(values) - 1)
 
@@ -18,11 +15,6 @@ class BinarySearch(object):
             return mid
 
 
-if __name__ == "__main__":
-    my_values = [1,2,3,4,5]
-    result = BinarySearch.rank1(3, my_values)
-    print(f"result: {result}")
-
-# python has no method overloading
-# calling static method within a python class seems a little awkward 
-# create a test case
+# REVIEW: python has no method overloading?
+# REVIEW: how to create/use static methods in python, what are the conventions
+# REVIEW: what are the conventions on class names, file names in python?

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>BinarySearch</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+<a href="index.html">HOME</a>
+</p>
+
+<div id="RECURSION"><h1 id="RECURSION">RECURSION</h1></div>
+
+<p>
+There are 3 important rules of thumb in developing recursive program:
+</p>
+
+<ol>
+<li>
+The recursion has a <em>base case</em> - always include a conditional statement as
+   the first statement in the program that has a return.
+
+<li>
+Recursive calls must address sub problems that are <em>smaller</em> in some sense, so
+   that recursive calls converge to the base case.  
+
+<li>
+Recursive calls should not address sub problems that <em>overlap</em>.  
+
+</ol>
+
+<hr />
+
+<p>
+Example for using recursion to perform a binary search.
+</p>
+
+<pre python>
+class BinarySearch(object):
+    def rank1(key, values):
+        return BinarySearch.rank2(key, values, 0, len(values) - 1)
+
+    def rank2(key, values, lo, hi):
+        if lo &gt; hi:
+            return -1
+        
+        mid = int(lo + (hi - lo) / 2)
+        if key &lt; values[mid]:
+            return BinarySearch.rank2(key, values, lo, mid - 1)
+        elif key &gt; values[mid]:
+            return BinarySearch.rank2(key, values, mid + 1, hi)
+        else:
+            return mid
+</pre>
+
+</body>
+</html>
