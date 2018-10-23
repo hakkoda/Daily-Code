@@ -1,5 +1,5 @@
 from nose.tools import *
-from DailyCode.Exercise01 import Exercise01
+from DailyCode.Exercise01 import transposition
 
 def transposition_test():
     target_list = [
@@ -8,7 +8,7 @@ def transposition_test():
         [ 3, 3, 3 ],
     ]
 
-    result = Exercise01.transposition(target_list)
+    result = transposition(target_list)
 
     expected_list = [
         [ 1, 2, 3 ],
