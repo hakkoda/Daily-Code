@@ -10,25 +10,36 @@
 # 10 --> 0000 1010
 # 20 --> 0001 0100
 
-# TODO: unit tests, format output more nicely
+# TODO: unit tests
 
+def to_binary(num):
+    quotient = int(num / 2)
+    mod = num % 2
 
-def to_binary(start_x):
-    remainder_x = int(start_x / 2)
-    mod_x = start_x % 2
-
-    if remainder_x > 0:
-        return to_binary(remainder_x) + format("{0}".format(mod_x))
+    if quotient > 0:
+        return to_binary(quotient) + str(mod)
     else:
-        return format("{0}".format(mod_x))
+        return str(mod)
 
-print(to_binary(1))
-print(to_binary(2))
-print(to_binary(3))
-print(to_binary(4))
-print(to_binary(5))
-print(to_binary(6))
-print(to_binary(7))
-print(to_binary(8))
-print(to_binary(9))
-print(to_binary(10))
+def to_binary_formatted(num):
+    binary = to_binary(num)
+    binary = binary.rjust(8, "0")
+    binary = binary[0:4] + " " + binary[4:8]
+    return f"{str(num).rjust(3)}: {binary}"
+
+
+print(to_binary_formatted(0))
+print(to_binary_formatted(1))
+print(to_binary_formatted(2))
+print(to_binary_formatted(3))
+print(to_binary_formatted(4))
+print(to_binary_formatted(5))
+print(to_binary_formatted(6))
+print(to_binary_formatted(7))
+print(to_binary_formatted(8))
+print(to_binary_formatted(9))
+print(to_binary_formatted(10))
+print(to_binary_formatted(15))
+print(to_binary_formatted(16))
+print(to_binary_formatted(20))
+print(to_binary_formatted(255))
